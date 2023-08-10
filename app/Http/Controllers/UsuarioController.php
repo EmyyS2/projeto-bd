@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsuarioRequest;
 use App\Models\Usuario;
 use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
-    public function store(Request $request)
+    public function store(UsuarioRequest $request)
     {
         $usuario = Usuario::create([
             'nome' => $request->nome,
