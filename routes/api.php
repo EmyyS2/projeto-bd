@@ -38,3 +38,5 @@ Route::put(
     'update',
     [UsuarioController::class, 'update']
 );
+
+Route::get('exportar/csv', [UsuarioController::class, 'exportarCsv']);
